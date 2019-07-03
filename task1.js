@@ -10,10 +10,8 @@ app.use(bodyParser.json());
 let baslikVeri;
 let metinVeri;
 
-app.set('view engine', 'pug');
-
 app.get('/', (req, res) => {
-  res.send(`<!DOCTYPE html><center>
+  res.send(`<!DOCTYPE html><center>'
     <form action = "http://localhost:${port}/kaydet" method="POST"> 
     <input type="text" id=baslik name=baslik placeholder="BASLIK GIR"><br>
     <input type="text" id=metin name=metin placeholder="METIN GIR"><br><br>
@@ -33,7 +31,7 @@ app.post('/kaydet', (req, res) => {
 });
 
 app.get('/icerik', (req, res) => {
-  res.render('index', { title: 'Title', bas: baslikVeri, message: metinVeri });
+  res.send(metinVeri);
 });
 
 app.listen(port);
