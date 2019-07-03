@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon task1",
-    "husnu": "nodemon task1"
+    "start": "nodemon task1"
   },
   "repository": {
     "type": "git",
@@ -20,7 +19,8 @@
   "homepage": "https://github.com/husnua/learn-nodejs#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
