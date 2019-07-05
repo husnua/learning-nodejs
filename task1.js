@@ -1,38 +1,35 @@
 const express = require('express');
 
+const low = require('lowdb');
+const FileSync = require('lowdb/adapters/FileSync');
+
+const adapter = new FileSync('db.json');
+const db = low(adapter);
+
 const port = 3000;
 const app = express();
 const bodyParser = require('body-parser');
 
+const routes = require('./routes');
+
 app.use(bodyParser.urlencoded({ extended: false }));
+
+db.defaults({ basliklar: [], metinler: [] })
+  .write();
+
+let countb = db.get('basliklar')
+  .size()
+  .value();
+
+let countm = db.get('metinler')
+  .size()
+  .value();
 
 let baslikVeri;
 let metinVeri;
 
 app.set('view engine', 'pug');
 
-app.get('/', (req, res) => {
-  res.send(`<!DOCTYPE html><center>
-    <form action = "http://localhost:${port}/kaydet" method="POST"> 
-    <input type="text" id=baslik name=baslik placeholder="BASLIK GIR"><br>
-    <input type="text" id=metin name=metin placeholder="METIN GIR"><br><br>
-    <button type=submit>GIR</button>
-    </form></center>`);
-});
-
-app.post('/kaydet', (req, res) => {
-  const { baslik = 'varsayilan', metin } = req.body;
-
-  baslikVeri = baslik;
-  metinVeri = metin;
-
-  res.send(`
-    <h1>${baslikVeri}</h1>
-    <p>${metinVeri}</p>`);
-});
-
-app.get('/icerik', (req, res) => {
-  res.render('index', { title: 'Title', bas: baslikVeri, message: metinVeri });
-});
+app.use('/', routes);
 
 app.listen(port);

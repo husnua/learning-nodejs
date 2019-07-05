@@ -2,9 +2,9 @@
   "name": "learn-nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "task1.js",
   "scripts": {
-    "start": "nodemon task1"
+    "start": "nodemon task1.js --ignore db.json"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "lowdb": "^1.0.0",
     "pug": "^2.0.4"
   },
   "devDependencies": {
