@@ -2,106 +2,29 @@
   "basliklar": [
     {
       "id": 1,
-      "title": "baslikk"
+      "title": "husnu"
     },
     {
       "id": 2,
-      "title": "000"
+      "title": "123"
     },
     {
       "id": 3,
-      "title": "qwerty"
-    },
-    {
-      "id": 4,
-      "title": "qwerty"
-    },
-    {
-      "id": 5,
-      "title": "abc"
-    },
-    {
-      "id": 6,
-      "title": "155"
-    },
-    {
-      "id": 7,
-      "title": "varsayilan"
-    },
-    {
-      "id": 8,
-      "title": "varsayilan"
-    },
-    {
-      "id": 9,
-      "title": "varsayilan"
-    },
-    {
-      "id": 10,
-      "title": "qwerty"
-    },
-    {
-      "id": 11,
-      "title": "uıgıugıdgc"
-    },
-    {
-      "id": 12,
-      "title": "erdem"
-    },
-    {
-      "id": 13,
-      "title": ""
+      "title": "153"
     }
   ],
   "metinler": [
     {
       "id": 1,
-      "title": "aaa"
+      "title": "arkca"
     },
     {
       "id": 2,
-      "title": ",,,"
+      "title": "456"
     },
     {
       "id": 3,
-      "title": "aa"
-    },
-    {
-      "id": 4,
-      "title": "aa"
-    },
-    {
-      "id": 5,
-      "title": "126"
-    },
-    {
-      "id": 6,
-      "title": "112"
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10,
-      "title": "qwerty"
-    },
-    {
-      "id": 11,
-      "title": "qwertclja"
-    },
-    {
-      "id": 12,
-      "title": "uslu"
-    },
-    {
-      "id": 13,
-      "title": ""
+      "title": "246"
     }
   ]
 }

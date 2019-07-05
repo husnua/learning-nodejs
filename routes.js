@@ -1,39 +1,17 @@
+/* eslint-disable no-undef */
 const express = require('express');
+
 const router = express.Router();
+const homeController = require('./controllers/homeController');
+const saveController = require('./controllers/saveController');
 
-router.get('/', (req, res) => {
-  res.render('form');
-});
+const VeriController = require('./controllers/veriController');
 
-router.post('/kaydet', (req, res) => {
-  const { baslik = 'varsayilan', metin } = req.body;
+router.get('/', homeController);
 
-  console.log(req.body);
+router.post('/kaydet', saveController);
 
-  baslikVeri = baslik;
-  metinVeri = metin;
 
-  db.get('basliklar')
-    .push({ id: countb += 1, title: baslikVeri })
-    .write();
-  db.get('metinler')
-    .push({ id: countm += 1, title: metinVeri })
-    .write();
-
-  res.send(`
-    <h1>${baslikVeri}</h1>
-    <p>${metinVeri}</p>`);
-});
-
-router.get('/icerik', (req, res) => {
-  res.render('index', { title: 'Title', bas: baslikVeri, message: metinVeri });
-});
-
-router.get('/veri', (req, res) => {
-  const data = db.get('basliklar').value();
-  // eslint-disable-next-line no-console
-  console.log(data);
-  res.render('veri', { data });
-});
+router.get('/veri', VeriController);
 
 module.exports = router;
