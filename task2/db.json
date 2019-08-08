@@ -1,0 +1,88 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "ad",
+      "surname": "soyad",
+      "email": "e-posta",
+      "password": "şifre"
+    },
+    {
+      "id": 2,
+      "name": "name",
+      "surname": "surname",
+      "email": "email",
+      "password": "password"
+    },
+    {
+      "id": 3,
+      "name": "1",
+      "surname": "2",
+      "email": "3",
+      "password": "4"
+    },
+    {
+      "id": 4,
+      "name": "2",
+      "surname": "3",
+      "email": "4",
+      "password": "5"
+    },
+    {
+      "id": 5,
+      "name": "3",
+      "surname": "4",
+      "email": "5",
+      "password": "6"
+    },
+    {
+      "id": 6,
+      "name": "4",
+      "surname": "5",
+      "email": "6",
+      "password": "7"
+    },
+    {
+      "id": 7,
+      "name": "a",
+      "surname": "b",
+      "email": "c",
+      "password": "d"
+    },
+    {
+      "id": 8,
+      "name": "ab",
+      "surname": "cd",
+      "email": "ef",
+      "password": "g"
+    },
+    {
+      "id": 9,
+      "name": "qwert",
+      "surname": "asdf",
+      "email": "asc",
+      "password": "a"
+    },
+    {
+      "id": 10,
+      "name": "asd",
+      "surname": "assd",
+      "email": "aaa",
+      "password": "bbb"
+    },
+    {
+      "id": 11,
+      "name": "husnu",
+      "surname": "arkca",
+      "email": "husnu@email.com",
+      "password": "sifre123"
+    },
+    {
+      "id": 12,
+      "name": "husn",
+      "surname": "arkc",
+      "email": "111",
+      "password": "111"
+    }
+  ]
+}
