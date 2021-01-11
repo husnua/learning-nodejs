@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-unused-expressions
+// eslint-disable-next-line import/no-extraneous-dependencies
 const { MongoClient } = require('mongodb');
 
 const url = 'mongodb://localhost:27017/mydb';

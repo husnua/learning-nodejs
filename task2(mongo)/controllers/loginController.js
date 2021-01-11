@@ -5,8 +5,8 @@ const { MongoClient } = require('mongodb');
 const url = 'mongodb://localhost:27017/mydb';
 let myobj = {};
 
-const loginController = (req, res) => {
 
+const loginController = (req, res) => {
   const { eposta, sifre } = req.body;
   MongoClient.connect(url, { useNewUrlParser: true }, (err, db) => {
     if (err) throw err;
@@ -16,20 +16,22 @@ const loginController = (req, res) => {
         console.log('HATA !!!');
         throw hata;
       }
-      
       try {
-        if (result.email == null) throw 'notFound';
-        if (result.password == sifre) {
+        if (result == null) {
+          const obj = { email: eposta, err: 'NotFound' };
+          throw obj;
+        }
+        if (result.password === sifre) {
           console.log('Sifre doğru');
           myobj = result;
           res.render('giris1', { Ad: myobj.name, Soyad: myobj.surname });
           console.log(myobj);
         } else {
           console.log('Sifre hatalı');
-          res.render('giris3', {EPOSTA: result.email });
+          res.render('giris3', { EPOSTA: result.email });
         }
-      } catch (err) {
-        console.log(err);
+      } catch (error) {
+        console.log(error);
         res.render('giris2');
       }
     });
